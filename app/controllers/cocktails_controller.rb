@@ -1,10 +1,11 @@
 class CocktailsController < ApplicationController
-  before_action :set_cocktail, only: [:show, :edit, :update, :destroy]
+  before_action :set_cocktail, only: [:show, :edit, :update]
   def index
     @cocktails = Cocktail.all
   end
 
   def show
+    @doses = @cocktail.doses
   end
 
   def new
@@ -25,11 +26,6 @@ class CocktailsController < ApplicationController
 
   def update
     @cocktail.update(cocktail_params)
-    @cocktail.save
-  end
-
-  def destroy
-    @cocktail.delete
     @cocktail.save
   end
 

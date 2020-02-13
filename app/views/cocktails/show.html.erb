@@ -2,23 +2,12 @@
   <h2 class = "card-title"><%= @cocktail.name %></h2>
   <p><em><strong>Ingredients : </strong></em>
   <ul>
-    <% @cocktail.ingredients.each_with_index do |ingredient, index| %>
-      <li><em><%= ingredient.name %>: <%= @cocktail.doses[index].description %></em></li>
-    <% end %></p>
+    <% @doses.each do |dose| %>
+      <li><em><%= dose.ingredient.name %> : <%= dose.description %> ,  <%= link_to "delete dose" , dose_path(dose) %></em></li>
+    <% end %>
   </ul>
   <p><%= link_to "Back to list", cocktails_path  %></p>
   <p><%= link_to "Add a dose", new_cocktail_dose_path(@cocktail)  %></p>
-  <p><%= link_to "Delete a dose", dose_path(@cocktail)  %></p>
 
 </div>
 
-<h1><%= @cocktail.name %></h1>
-<% @doses.each do |dose| %>
-  <%= dose.description %>
-  <%= dose.ingredient.name %>
-  <%=  link_to dose_path(dose), method: :delete, data: { confirm: “Are you sure?” } do  %>
-    <i class=“fas fa-trash”></i>
-  <% end %>
-<% end %>
-<%= link_to ‘back to cocktails list’, cocktails_path %>
-<%= link_to ‘add a dose’, new_cocktail_dose_path(@cocktail) %>
