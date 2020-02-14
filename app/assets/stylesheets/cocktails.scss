@@ -3,8 +3,8 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 body {
-  background-image: url("../../san_francisco.jpg");
-  opacity: 0.7;
+  background-image: url("");
+  background-size: cover;
 }
 
 
@@ -15,12 +15,13 @@ body {
 }
 
 .card {
-  background-color: #F1DAC4;
+  background-color: white;
   margin: 10px;
   border: solid 1px black;
-  box-shadow: 7px 2px 2px white;
+  box-shadow: 0px 2px 2px black;
   border-radius: 10px;
-  opacity: 1;
+  opacity: 8px;
+
 }
 
 img {
