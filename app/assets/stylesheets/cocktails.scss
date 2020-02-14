@@ -3,6 +3,27 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 body {
-  background-color: lightskyblue;
+  background-image: url("../../san_francisco.jpg");
+  opacity: 0.7;
+}
+
+
+.cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+
+}
+
+.card {
+  background-color: #F1DAC4;
+  margin: 10px;
+  border: solid 1px black;
+  box-shadow: 7px 2px 2px white;
+  border-radius: 10px;
+  opacity: 1;
+}
+
+img {
+  border-radius: 2px;
 }
 

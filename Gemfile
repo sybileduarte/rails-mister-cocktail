@@ -28,6 +28,7 @@ gem 'jbuilder', '~> 2.5'
 # gem 'redis', '~> 4.0'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
+
 gem 'dotenv-rails', groups: [:development, :test]
 
 # Use ActiveStorage variant
@@ -61,3 +62,4 @@ gem 'rails-controller-testing', group: [ :test ]
 gem 'autoprefixer-rails'
 gem 'font-awesome-sass', '~> 5.6.1'
 gem 'simple_form'
+gem 'cloudinary', '~> 1.12.0'

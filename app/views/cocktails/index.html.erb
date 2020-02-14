@@ -1,11 +1,18 @@
-<div class = "p-3">
-  <h1>Cocktails</h1>
 
+<div class="cards">
   <% @cocktails.each do |cocktail| %>
-  <div class = "card-body border p-3 mb-2">
-    <h4 class = "card-title"><%= cocktail.name %></h4>
-    <%= link_to "See details", cocktail_path(cocktail) %>
+
+  <div class = card>
+    <div class="card-body">
+      <h4 class = "card-title"><%= cocktail.name %></h4>
+      <%= link_to "See details", cocktail_path(cocktail) %>
+    </div>
+    <img class = "rounded-lg"><% cocktail.photos.each do |photo| %>
+      <%= cl_image_tag photo.key, height: 300, width: 400, crop: :fill %>
+    <% end %>
   </div>
-  <% end %>
-  <p class = "p-3 mb-2"><%= link_to "Create a Cocktail", new_cocktail_path %></p>
+
+
+<% end %>
 </div>
+<button type="button" class = "btn btn-dark"><%= link_to "Create a Cocktail", new_cocktail_path %></button>
