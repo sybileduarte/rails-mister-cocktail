@@ -3,8 +3,8 @@
   <p><em><strong>Ingredients : </strong></em>
   <ul>
     <% @doses.each do |dose| %>
-      <li><em><%= dose.ingredient.name %> : <%= dose.description %>,
-      <%= link_to "delete ingredient" , dose_path(dose), method: :delete %></em></li>
+      <li><em><%= dose.ingredient.name %> : <%= dose.description %> -----
+      <%= link_to "delete this ingredient" , dose_path(dose), method: :delete %></em></li>
     <% end %>
   </ul>
   <p><%= link_to "Back to list", cocktails_path  %></p>
